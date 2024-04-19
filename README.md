@@ -1,6 +1,9 @@
-# LibraryAngular
+# Library Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=flat&logo=angular&logoColor=white)](https://angular.dev/)
 
 ## Development server
 
