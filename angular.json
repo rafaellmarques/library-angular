@@ -3,5 +3,58 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "library": {
+      "projectType": "library",
+      "root": "projects/library",
+      "sourceRoot": "projects/library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/library/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/library/**/*.ts", "projects/library/**/*.html"]
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "displayBlock": true,
+          "path": "projects/library/src/lib/components",
+          "style": "scss"
+        },
+        "@schematics/angular:service": {
+          "path": "projects/library/src/lib/services"
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "89692414-9af1-4384-a5b1-3b3d7ec9e3e2",
+    "schematicCollections": ["@angular-eslint/schematics"],
+    "cache": {
+      "enabled": false
+    }
   }
 }
