@@ -36,6 +36,26 @@
           "options": {
             "lintFilePatterns": ["projects/library/**/*.ts", "projects/library/**/*.html"]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/library/.storybook",
+            "browserTarget": "library:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/library"],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/library/.storybook",
+            "browserTarget": "library:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/library"],
+            "outputDir": "storybook-static"
+          }
         }
       },
       "schematics": {
