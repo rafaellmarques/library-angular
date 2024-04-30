@@ -37,7 +37,19 @@ yarn-error.log
 testem.log
 /typings
 package-lock.json
+yarn.lock
+
+# NX
+/.nx
 
 # System files
 .DS_Store
 Thumbs.db
+
+# Storybook
+*storybook.log
+
+# Chromatic
+chromatic.log
+chromatic-build-*.xml
+chromatic-diagnostics.json
