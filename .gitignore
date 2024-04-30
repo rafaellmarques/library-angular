@@ -46,4 +46,10 @@ yarn.lock
 .DS_Store
 Thumbs.db
 
+# Storybook
 *storybook.log
+
+# Chromatic
+chromatic.log
+chromatic-build-*.xml
+chromatic-diagnostics.json
